@@ -1,10 +1,8 @@
 <?php require('logic.php'); ?>
 
- 
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
     <?php include('header.php'); ?>
 
@@ -12,10 +10,10 @@
 
         <?php include('content.php'); ?>
 
-        <script src="js/scripts.js"></script>
+        <!--<script src="js/scripts.js"></script>-->
 
     </body>
 
     <script type="text/javascript"></script>
 
-</html
+</html>

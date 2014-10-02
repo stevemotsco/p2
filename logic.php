@@ -4,48 +4,81 @@
 // Run logic on responses to index form.
 
 
-if (isset($_POST['wcount'])){
+if (isset($_POST['wcount']) > 0){
     $wcount = $_POST['wcount'];
+    echo $_POST['wcount'];
+    //echo $wcount;
 } else {
 	// if wcount not received then default to four words
 	$wcount = 4;
 }
 
-//if (iss($_POST['number'])){
-if (isset($_POST['ncount']) > 0){
-    $ncount = true;
+if (isset($_POST['ncount'])){
+//if (isset($_POST['ncount']) > 0){
+	//$ncount = $_POST['ncount'];
+	//echo $_POST['ncount'];
+	$ncount = true; 
+	echo "ncount=true";
 } else {
+    //$ncount = 0;
     $ncount = false;
 }
 
-//if (iss($_POST['symbol'])){
-if (isset($_POST['scount']) > 0){
-    $scount = true;
+if (isset($_POST['scount']) == true){
+//if (isset($_POST['scount']) > 0){
+    //$scount = $_POST['scount'];
+	//echo $_POST['scount'];
+	$scount = true; 
+	echo "scount=true";
 } else {
+    //$scount = 0;
     $scount = false;
 }
 
 if (isset($_POST['uppercase'])){
-    $uppercase = true;
+	//echo $_POST['uppercase'];
+    $uppercase = true;  
+    echo "uppercase=true";
 }else {
-    $uppercase = false;
+    $uppercase = false; 
 }
 
+
+if ($ncount == true) {
+	echo "ncount == true";
+}
+if ($scount == true) {
+	echo "scount == true";
+}
+if ($uppercase == true) {
+	echo "uppercase == true";
+}
+echo ('wcount='.$wcount);
+//echo ('ncount='.$ncount);
+//echo ('scount='.$scount);
+//echo ('uppercase='.$uppercase);
 //define some needed arrays
-$symbols_array = [];
+$selwords_array = [];
+$symbols_array = ['!','@','$','%','^','&','*','(',')','~','-','_','+','='];
 $numbers_array = [0,1,2,3,4,5,6,7,8,9];
 
 //turn text file of words into an array of words
 if ($word_array = file('wordsEnglish.txt')) {
 	//do something with $wordList which is an array of words
-	//echo 'Countof words: ' . count($wordList) . '<br/>';'
-	//echo $wordList[234];
-	$selwords_array = ['!','@','#','$','%','^','&','*','(',')','~','-','_','+','='];
+	echo 'Count of words: ' . count($word_array) . '<br/>';
+	echo $word_array[3];
+	
+	echo 'Countof symbols: ' . count($symbols_array) . '<br/>';
+	echo $symbols_array[3];
+
+	echo 'Countof numbers: ' . count($numbers_array) . '<br/>';
+	echo $numbers_array[3];
 
 	for ($i = 0; $i < $wcount; $i++) {
 		$rand = rand(0, count($word_array) - 1);
 		$one_word = $word_array[$rand];
 		array_push($selwords_array, $one_word);
+		echo $one_word;
 	}
 }
 
