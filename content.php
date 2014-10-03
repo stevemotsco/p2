@@ -7,7 +7,7 @@
     <div class="wbdr">
         <p><a href="http://xkcd.com" target="_blank">xkcd </a> is "A webcomic of Romance, Sarcasm, Math, and Language" that popularized the idea that a set of random words makes for a much more secure password than a string of random letters (upper/lower case), numbers, and symbols.  Use this password generator to create a <a href="http://xkcd.com/936/" target="_blank">xkcd type password.</a></p>
         <a href="http://xkcd.com/936/" target="_blank">
-            <img class="comic" src="http://imgs.xkcd.com/comics/password_strength.png" >
+            <img class="comic" src="http://imgs.xkcd.com/comics/password_strength.png" alt="xkcd Password Generator">
         </a>
     </div>
 
@@ -62,8 +62,8 @@
             <option <?php echo ($scount) == 9 ? 'selected="selected"' : ''; ?> value='9'>9</option>
         </select><br/>
  
-        <label name="uppercase">Uppercase first letter of each word?</label>
-        <input type="checkbox" name="uppercase" value="uppercase" <?php echo ($uppercase) ? "checked='checked'" : "" ; ?> /><br/><br/>
+        <label for="uppercase">Uppercase first letter of each word?</label>
+        <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" <?php echo ($uppercase) ? "checked='checked'" : "" ; ?> /><br/><br/>
 
         <input type="submit" name="submit" value="Generate Password" />
     </div>
