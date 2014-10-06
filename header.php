@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style2.css" type="text/css"> 
     <style type="text/css"></style>
-    <title>Steve Motsco - P1 - CSCI E-15 -- xkcd Password Generator</title>
+    <title>Steve Motsco - P2 - CSCI E-15 -- xkcd Password Generator</title>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
