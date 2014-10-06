@@ -63,12 +63,12 @@ if ($word_array = file('wordsEnglish.txt')) {
 		array_splice($selwords_array, $rand, 0, $one_number);
 	}
 
-	if ($scount == true) {
-		$rand = rand(0, count($symbols_array) - 1);
-		$one_symbol = $symbols_array[$rand] . " ";
-		$rand = rand(0, count($selwords_array) - 1);
-		array_splice($selwords_array, $rand, 0, $one_symbol);
-		}
+	//if ($scount == true) {
+	//	$rand = rand(0, count($symbols_array) - 1);
+	//	$one_symbol = $symbols_array[$rand] . " ";
+	//	$rand = rand(0, count($selwords_array) - 1);
+	//	array_splice($selwords_array, $rand, 0, $one_symbol);
+	//	}
 
 	//add in symbols (or not)
 	for ($i = 0; $i < $scount; $i++) {
